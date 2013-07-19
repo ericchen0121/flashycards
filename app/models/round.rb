@@ -1,3 +1,4 @@
 class Round < ActiveRecord::Base
-  has_many :guess
+  belongs_to :deck
+  has_many :guesses
 end
