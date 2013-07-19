@@ -1,5 +1,21 @@
 <div class="container">
-  <h1>Index page for playing card decks</h1>
-  <h3>This is our index page</h3>
-  </table>
+  <h1>Welcome to Deck Rounds</h1>
+
+  <ul>
+    <form action='/user/create' method='post'>
+      Create an account:<br>
+      <li>Username<input type='text' name='name'/></li><br>
+      <li>Password<input type='text'name='password'/></li><br>
+      <li><input type='submit'/></li>
+    </form>
+  </ul>
+
+    <ul>
+    <form action='/user/login' method='post'>
+      Login:<br>
+      <li>Username<input type='text' name='name'/></li><br>
+      <li>Password<input type='text'name='password'/></li><br>
+      <li><input type='submit'/></li>
+    </form>
+  </ul>
 </div>
