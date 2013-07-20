@@ -1,0 +1,14 @@
+<div>TEST</div>
+<br>
+<br>
+<div class="container">
+  <% if @card %>
+    <div>Term: <%= @card.term %></div>
+      <form action='/round/:deck_id/:card_id' method='post'>
+      <br>
+      <li>Guess: <input type='text' name='guess'/></li>
+      <br>
+      <li><input type='submit'/></li>
+    </form>
+  <% end %>
+</div>
