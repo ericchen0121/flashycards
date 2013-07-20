@@ -4,7 +4,7 @@
 <div class="container">
   <% if @card %>
     <div>Term: <%= @card.term %></div>
-      <form action='/round/:deck_id/:card_id' method='post'>
+      <form action='/round/deck/<%= @deck_id %>/card/<%= @card.id + 1 %>' method='get'>
       <br>
       <li>Guess: <input type='text' name='guess'/></li>
       <br>

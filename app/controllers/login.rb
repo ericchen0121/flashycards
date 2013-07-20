@@ -9,7 +9,7 @@ post '/login' do
   @user = User.where(name: params[:name], password: params[:password]).first
 
   if @user != nil
-    session[:user_id] = User.where(name: params[:name], password: params[:password]).first.id
+    session[:user_id] = @user.id
     redirect '/decks'
   else
     @message = "This user is not in the database.  Please make a new account!"
