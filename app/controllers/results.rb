@@ -4,5 +4,7 @@ get '/results' do
   round = Round.find(round_id)
   @results = {round: round_id, correct: round.correct_count, incorrect: round.incorrect_count, total: round.total}
 
+  
+
   erb :results
 end
