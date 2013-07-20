@@ -10,9 +10,8 @@ post '/round/:deck_id' do
 end
 
 get '/round/:deck_id/:card_id' do
-  if Round.where(deck_id: params[:deck_id], user_id: session[:user_id]) == nil
-    Round.create(deck_id: params[:deck_id], user_id: session[:user_id])
-  end
+  Round.create(deck_id: params[:deck_id], user_id: session[:user_id])
+  
   @card = Deck.where(id: params[:deck_id]).first.cards.find(params[:card_id])
   @card
   erb :card_display
