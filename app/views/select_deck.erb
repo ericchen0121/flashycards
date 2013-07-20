@@ -2,7 +2,7 @@
   <h1>Select a Deck You Want to Play:</h1>
     <ul>
       <% @decks.each do |deck| %>
-        <li><a href='/round/deck/<%=deck.id %>/card/1'><%= deck.name %></a></li>
+        <li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a></li>
       <% end %>
     </ul>
 </div>

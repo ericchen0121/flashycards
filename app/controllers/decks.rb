@@ -9,21 +9,43 @@ post '/round/:deck_id' do
   puts "hello"
 end
 
-get '/round/deck/:deck_id/card/:card_id' do
-  if params[:card_id].to_i == 1 
-    Round.create(deck_id: params[:deck_id], user_id: session[:user_id])
-  end
-  # count correct or not
-
+get '/deck/:deck_id/start' do
+ 
+  @deck_id = params[:deck_id]
   session[:array_cards] = []
-  @cards = Deck.where(id: params[:deck_id]).first.cards
-  @cards.each do |card|
+
+  @all_cards_in_deck = Deck.where(id: params[:deck_id]).first.cards
+  @all_cards_in_deck.each do |card|
     session[:array_cards] << card.id
   end
 
-  session[:array_cards].uniq!
-  session[:array_cards].shuffle
+  session[:array_cards].shuffle!
 
-  @deck_id = params[:deck_id]
-  # erb :card_display
+  card_id = session[:array_cards].pop
+  @card = Card.where(id: card_id).first # Card object
+
+  new_round = Round.create(deck_id: params[:deck_id], user_id: session[:user_id])
+  session[:round_id] = new_round.id
+
+  erb :card_display
+end
+
+post '/deck/:deck_id/card/new' do
+
+  # THIS LOGIC DEPENDS ON params[:card_id] 
+  current_card = Card.find(params[:card_id])
+  if current_card.definition.downcase == params[:guess].downcase
+    Guess.create(correct: 1, round_id: session[:round_id] , card_id: params[:card_id])
+  else
+    Guess.create(correct: 0, round_id: session[:round_id] , card_id: params[:card_id])
+  end
+
+  if session[:array_cards].empty?
+    # erb :round_results
+  else
+    @deck_id = params[:deck_id]
+    card_id = session[:array_cards].pop
+    @card = Card.where(id: card_id).first
+    erb :card_display
+  end
 end

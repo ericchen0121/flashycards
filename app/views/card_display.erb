@@ -2,13 +2,12 @@
 <br>
 <br>
 <div class="container">
-  <% if @card %>
     <div>Term: <%= @card.term %></div>
-      <form action='/round/deck/<%= @deck_id %>/card/<%= @card.id + 1 %>' method='get'>
-      <br>
+    <form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
       <li>Guess: <input type='text' name='guess'/></li>
+      <input type='hidden' name = 'card_id' value = <%= @card.id %> >
       <br>
       <li><input type='submit'/></li>
     </form>
-  <% end %>
+
 </div>
