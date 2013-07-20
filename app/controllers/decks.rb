@@ -1,4 +1,3 @@
-
 get '/decks' do
   @decks = Deck.all
   erb :select_deck
