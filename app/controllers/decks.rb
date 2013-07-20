@@ -32,7 +32,6 @@ end
 
 post '/deck/:deck_id/card/new' do
 
-  # THIS LOGIC DEPENDS ON params[:card_id] 
   current_card = Card.find(params[:card_id])
   if current_card.definition.downcase == params[:guess].downcase
     Guess.create(correct: 1, round_id: session[:round_id] , card_id: params[:card_id])
@@ -41,7 +40,7 @@ post '/deck/:deck_id/card/new' do
   end
 
   if session[:array_cards].empty?
-    # erb :round_results
+    redirect '/results'
   else
     @deck_id = params[:deck_id]
     card_id = session[:array_cards].pop
