@@ -2,7 +2,7 @@
   <h1>Welcome to Deck Rounds</h1>
 
   <ul>
-    <form action='/user/create' method='post'>
+    <form action='/create' method='post'>
       Create an account:<br>
       <li>Username<input type='text' name='name'/></li><br>
       <li>Password<input type='text'name='password'/></li><br>
@@ -10,12 +10,16 @@
     </form>
   </ul>
 
-    <ul>
-    <form action='/user/login' method='post'>
+  <ul>
+    <form action='/login' method='post'>
       Login:<br>
       <li>Username<input type='text' name='name'/></li><br>
       <li>Password<input type='text'name='password'/></li><br>
       <li><input type='submit'/></li>
     </form>
   </ul>
+  <br>
+  <% if @message %>
+    <div><%= @message %></div>
+  <% end %>
 </div>
