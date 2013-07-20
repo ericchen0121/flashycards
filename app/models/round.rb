@@ -28,4 +28,13 @@ class Round < ActiveRecord::Base
   def total
     total = incorrect_count + correct_count
   end
+
+  def percent_correct
+    ((correct_count.to_f / total).round(2) * 100).to_i
+  end
+
+  def percent_incorrect
+    100 - percent_correct
+  end
+
 end

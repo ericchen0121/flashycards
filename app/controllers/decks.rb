@@ -16,7 +16,7 @@ get '/deck/:deck_id/start' do
   # create cards to display
   session[:array_cards] = []
 
-  @all_cards_in_deck = Deck.where(id: @deck_id).first.cards
+  @all_cards_in_deck = Deck.find(@deck_id).cards 
   @all_cards_in_deck.each do |card|
     session[:array_cards] << card.id
   end

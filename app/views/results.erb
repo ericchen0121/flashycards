@@ -1,8 +1,7 @@
 <ul>
   <li>Round: <%= @results[:round] %></li>
   <li>Total: <%= @results[:total] %></li>
-  <li>Correct: <%= @results[:correct] %></li>
-  <li>Incorrect: <%= @results[:incorrect] %></li>
-  <li>Percentage correct: <%= @results[:correct] / @results[:incorrect] %>%</li>
+  <li>Correct: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
+  <li>Incorrect: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
 </ul>
 
