@@ -1,46 +1,37 @@
-<html>
-<head>
-  <link rel="stylesheet" href="../../public/css/normalize.css">
-  <link rel="stylesheet" href="../../public/css/main.css">
-</head>
+<div class="container">
+  <h1>Test Your Knowledge with our Decks!</h1>
+  
+  <ul>
+    <form class="list" action='/create' method='post'>
+      <h2>Create an account:</h2>
+      <li>Desired username: <input type='text' name='name'/></li><br>
+      <li>Desired Password: <input type='text'name='password'/></li><br>
+      <li><input class="button" type='submit'/></li>
+    </form>
+  </ul>
 
-<body>
-  <div class="container">
-    <h1>Test Your Knowledge with our Decks!</h1>
-    
-    <ul>
-      <form class="list" action='/create' method='post'>
-        <h2>Create an account:</h2>
-        <li>Desired username: <input type='text' name='name'/></li><br>
-        <li>Desired Password: <input type='text'name='password'/></li><br>
-        <li><input class="button" type='submit'/></li>
-      </form>
-    </ul>
-
-    <ul>
-      <form class="list" action='/login' method='post'>
-        <h2>Login:</h2>
-        <li>Username: <input type='text' name='name'/></li><br>
-        <li>Password: <input type='text'name='password'/></li><br>
-        <li><input class="button" type='submit'/></li>
-      </form>
-    </ul>
-    <br>
-    <% if @message %>
-      <p>
-        <ul>
-          <% @message.each do |error_message| %>
-            <li><%= error_message %></li>
-          <% end %>
-        </ul>
-      </p>
-    <% end %>
-  </div>
-
-  <img id="spidey" src="http://24.media.tumblr.com/tumblr_madk3hYQBB1rwv51ko1_500.jpg">
+  <ul>
+    <form class="list" action='/login' method='post'>
+      <h2>Login:</h2>
+      <li>Username: <input type='text' name='name'/></li><br>
+      <li>Password: <input type='text'name='password'/></li><br>
+      <li><input class="button" type='submit'/></li>
+    </form>
+  </ul>
   <br>
-  <div id="footer">
-    Coded by: Dan, Eric, Adam, and Jared
-  </div>
-</body>
-</html>
+  <% if @message %>
+    <p>
+      <ul>
+        <% @message.each do |error_message| %>
+          <li><%= error_message %></li>
+        <% end %>
+      </ul>
+    </p>
+  <% end %>
+</div>
+
+<img id="spidey" src="http://24.media.tumblr.com/tumblr_madk3hYQBB1rwv51ko1_500.jpg">
+<br>
+<div id="footer">
+  Coded by: Dan, Eric, Adam, and Jared
+</div>

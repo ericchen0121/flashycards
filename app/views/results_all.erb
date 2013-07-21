@@ -1,10 +1,18 @@
-<% @results.each do |result| %>
-  <ul> 
-    <li>Deck: <%= result[:deck_name] %></li>
-    <li>Round: <%= result[:round] %></li>
-    <li>Total: <%= result[:total] %></li>
-    <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
-    <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
-  </ul><br>
-<% end %>
+<div class="container">
+  <div id="results">
+    <h1>Your results for all rounds are: </h1>
+    <div class="list_everything">
+      <% @results.each do |result| %>
+        <li>Deck: <%= result[:deck_name] %></li>
+        <li>Round: <%= result[:round] %></li>
+        <li>Total Cards: <%= result[:total] %></li>
+        <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
+        <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
+      <% end %>
+    </div>
+    <div>
+      <p><a href= '/decks' >Play</a></p>
+    </div>
+  </div>
+</div>
 
