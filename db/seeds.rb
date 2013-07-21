@@ -71,7 +71,7 @@ state_deck << Card.create(term: "South Carolina", definition:  "Columbia")
 state_deck << Card.create(term: "South Dakota", definition:  "Pierre")
 state_deck << Card.create(term: "Tennessee", definition: "Nashville")
 state_deck << Card.create(term: "Texas", definition: "Austin")
-state_deck << Card.create(term: "Utah", definition: "Salt Lake) City"
+state_deck << Card.create(term: "Utah", definition: "Salt Lake City")
 state_deck << Card.create(term: "Vermont", definition: "Montpelier")
 state_deck << Card.create(term: "Virginia", definition: "Richmond")
 state_deck << Card.create(term: "Washington", definition: "Olympia")
