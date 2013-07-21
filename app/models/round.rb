@@ -1,4 +1,6 @@
 class Round < ActiveRecord::Base
+  attr_accessor :deck_id
+
   belongs_to :user
   belongs_to :deck
   has_many :guesses

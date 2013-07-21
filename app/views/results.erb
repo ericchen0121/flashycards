@@ -6,6 +6,7 @@
 		<div id="results">
 			<h1>Your results for this round are: </h1>
 			<div class="list_everything">
+        <li>Deck: <%= @results[:deck_name] %></li>
 				<li>Round# <%= @results[:round] %></li>
 				<li>Total guesses made: <%= @results[:total] %></li>
 				<li>Correct guesses: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
