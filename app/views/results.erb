@@ -1,9 +1,16 @@
 <html>
-
-<ul>
-  <li>Round: <%= @results[:round] %></li>
-  <li>Total: <%= @results[:total] %></li>
-  <li>Correct: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
-  <li>Incorrect: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
-</ul>
-
+<head>
+</head>
+<body>
+	<div class="container">
+		<div id="results">
+			<h1>Your results for this round are: </h1>
+			<div class="list_everything">
+				<li>Round# <%= @results[:round] %></li>
+				<li>Total guesses made: <%= @results[:total] %></li>
+				<li>Correct guesses: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
+				<li>Incorrect guesses: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
+			</div>
+		</div>
+</body>
+</html>

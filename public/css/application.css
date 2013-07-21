@@ -1,35 +1,33 @@
 body {
+	background-image:url('notepad.jpg');
 	background-color: #4682B4;
 }
 
 .container {
   margin: 20px auto;
   width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 3px solid #FFFFF0;
-  background-color: #4682B4;
+  padding: 6em 20px 20px 20px;
 }
 
 .container h1 {
 	padding-top: 20px;
-	color: #FFFFF0;
+	color: #191970;
 	text-align: center;
-}
-
-.container h2 {
-	color: #FFFFF0;
 }
 
 .list {
 	list-style-type: none;
 }
 
-#list_deck {
+.list_everything {
 	list-style-type: none;
 	text-align: center;
+	text-decoration: none;
 }
 
-.button {
+.list_everything li {
+	padding: 10px;
+	font-size: 20px;
 }
 
 #spidey {
@@ -52,6 +50,10 @@ body {
 	display: inline-block;
 	margin: 0;
 	padding: 5px;
+}
+
+#results {
+	list-style-type: none;
 }
 
 #footer {

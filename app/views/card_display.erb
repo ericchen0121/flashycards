@@ -5,7 +5,7 @@
 </head>
 <body>
 	<div class="container">
-		<h2><div id="term">Term: <%= @card.definition %></div></h2>
+		<h1><div id="term">Term: <%= @card.definition %></div></h1>
 		<div class="card">
 			<div id="card">
 				<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
