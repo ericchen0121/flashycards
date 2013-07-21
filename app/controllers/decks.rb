@@ -5,10 +5,6 @@ get '/decks' do
   erb :select_deck
 end
 
-post '/round/:deck_id' do
-  puts "hello"
-end
-
 get '/deck/:deck_id/start' do
  
   @deck_id = params[:deck_id]
@@ -28,7 +24,7 @@ get '/deck/:deck_id/start' do
   @card = Card.where(id: card_id).first # Card object
 
   #creates round
-  new_round = Round.create(deck_id: @deck_id, user_id: session[:user_id])
+  new_round = Round.create( user_id: session[:user_id], deck_id: @deck_id )
   session[:round_id] = new_round.id
 
   erb :card_display

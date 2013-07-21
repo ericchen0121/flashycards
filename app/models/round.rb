@@ -1,5 +1,4 @@
 class Round < ActiveRecord::Base
-  attr_accessor :deck_id
 
   belongs_to :user
   belongs_to :deck
@@ -17,18 +16,11 @@ class Round < ActiveRecord::Base
   end
 
   def incorrect_count
-    incorrect_count = 0
-    guesses.each do |guess|
-      if guess.correct == 0
-        incorrect_count += 1
-      end
-    end
-
-    incorrect_count
+    guesses.count - correct_count
   end
 
   def total
-    total = incorrect_count + correct_count
+    guesses.count
   end
 
   def percent_correct
@@ -37,6 +29,10 @@ class Round < ActiveRecord::Base
 
   def percent_incorrect
     100 - percent_correct
+  end
+
+  def data
+    {deck_name: deck.name, round: id, correct: correct_count, incorrect: incorrect_count, total: total, percent_correct: percent_correct, percent_incorrect: percent_incorrect}
   end
 
 end
