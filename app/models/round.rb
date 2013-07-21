@@ -6,12 +6,7 @@ class Round < ActiveRecord::Base
 
   def correct_count
     correct_count = 0
-    guesses.each do |guess|
-      if guess.correct == 1
-       correct_count += 1
-      end
-    end
-
+    guesses.each {|guess| correct_count += 1 if guess.correct == 1}
     correct_count
   end
 
@@ -24,7 +19,8 @@ class Round < ActiveRecord::Base
   end
 
   def percent_correct
-    ((correct_count.to_f / total).round(2) * 100).to_i
+      # total = total.nonzero? || 1 # avoid division by zero
+      (correct_count.to_f / (total.nonzero? || 1) * 100).to_i
   end
 
   def percent_incorrect
