@@ -8,7 +8,6 @@ get '/results' do
 end
 
 get '/results/all' do
-  
   # get all rounds for the user
   # iterate .each over all rounds 
   # @results << '
