@@ -8,7 +8,14 @@ get '/results' do
 end
 
 get '/results/all' do
-  # get all rounds for the user
-  # iterate .each over all rounds 
-  # @results << '
+  user_id = session[:user_id]
+  user_rounds = User.find(user_id).rounds.reverse # latest round first
+
+  @results = []
+  user_rounds.each do |round|
+    @results << round.data
+    p @results
+  end
+
+  erb :results_all
 end

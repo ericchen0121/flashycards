@@ -1,8 +1,10 @@
-<ul>
-  <li>Deck: <%= @results[:deck_name] %></li>
-  <li>Round: <%= @results[:round] %></li>
-  <li>Total: <%= @results[:total] %></li>
-  <li>Correct: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
-  <li>Incorrect: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
-</ul>
+<% @results.each do |result| %>
+  <ul> 
+    <li>Deck: <%= result[:deck_name] %></li>
+    <li>Round: <%= result[:round] %></li>
+    <li>Total: <%= result[:total] %></li>
+    <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
+    <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
+  </ul><br><br>
+<% end %>
 
