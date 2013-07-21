@@ -1,29 +1,40 @@
+<html>
 <head>
-<link rel="stylesheet" href="../../public/css/normalize.css">
-<link rel="stylesheet" href="../../public/css/main.css">
-<div class="container">
-  <h1>Welcome to Deck Rounds</h1>
-
-  <ul>
-    <form action='/create' method='post'>
-      Create an account:<br>
-      <li>Username<input type='text' name='name'/></li><br>
-      <li>Password<input type='text'name='password'/></li><br>
-      <li><input type='submit'/></li>
-    </form>
-  </ul>
-
-  <ul>
-    <form action='/login' method='post'>
-      Login:<br>
-      <li>Username<input type='text' name='name'/></li><br>
-      <li>Password<input type='text'name='password'/></li><br>
-      <li><input type='submit'/></li>
-    </form>
-  </ul>
-  <br>
-  <% if @message %>
-    <div><%= @message %></div>
-  <% end %>
-</div>
+  <link rel="stylesheet" href="../../public/css/normalize.css">
+  <link rel="stylesheet" href="../../public/css/main.css">
 </head>
+
+<body>
+  <div class="container">
+    <h1>Test Your Knowledge with our Decks!</h1>
+
+    <ul>
+      <form action='/create' method='post'>
+        <h2>Create an account:</h2>
+        <li>Desired username: <input type='text' name='name'/></li><br>
+        <li>Desired Password: <input type='text'name='password'/></li><br>
+        <li><input class="button" type='submit'/></li>
+      </form>
+    </ul>
+
+    <ul>
+      <form action='/login' method='post'>
+        <h2>Login:</h2>
+        <li>Username: <input type='text' name='name'/></li><br>
+        <li>Password: <input type='text'name='password'/></li><br>
+        <li><input class="button" type='submit'/></li>
+      </form>
+    </ul>
+    <br>
+    <% if @message %>
+    <div><%= @message %></div>
+    <% end %>
+  </div>
+
+<!--   <img id="spidey" src="http://24.media.tumblr.com/tumblr_madk3hYQBB1rwv51ko1_500.jpg"> -->
+  <br>
+  <div id="footer">
+    Coded by: Dan, Eric, Adam, and Jared
+  </div>
+</body>
+</html>
