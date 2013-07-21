@@ -1,8 +1,14 @@
-<div class="container">
-  <h1>Select a Deck You Want to Play:</h1>
-    <ul>
-      <% @decks.each do |deck| %>
-        <li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a></li>
-      <% end %>
-    </ul>
-</div>
+<html>
+<head>
+</head>
+<body>
+	<div class="container">
+		<h1>Select a Deck You Want to Play:</h1>
+		<div id="list_deck">
+			<% @decks.each do |deck| %>
+			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a></li>
+			<% end %>
+		</div>
+	</div>
+</body>
+</html>

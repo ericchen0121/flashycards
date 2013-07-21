@@ -6,36 +6,56 @@ body {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 3px solid white;
+  border: 3px solid #FFFFF0;
   background-color: #4682B4;
 }
 
 .container h1 {
 	padding-top: 20px;
-	 color:white;
-	 text-align: center;
-}
-
-.container ul {
-	/*color: #2F4F4F;*/
-	list-style-type: none;
+	color: #FFFFF0;
+	text-align: center;
 }
 
 .container h2 {
+	color: #FFFFF0;
+}
 
+.list {
+	list-style-type: none;
+}
+
+#list_deck {
+	list-style-type: none;
+	text-align: center;
 }
 
 .button {
-}
-
-#footer {
-	width: 100%;
-	text-align: center;
-	color: #2F4F4F;
 }
 
 #spidey {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#term {
+	padding-top: 10px;
+	text-align: center;
+}
+
+#card form {
+	display: block;
+	text-align: center;
+}
+
+#card li {
+	display: inline-block;
+	margin: 0;
+	padding: 5px;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+	color: #8B008B;
 }
