@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A\w+\Z/}
   # Passwords cannot be blank, CASE MATTERS
   validates :password, presence: true
-
+   
   def return_errors
     # Grab the error messages hash from the User object
     error_message_hash = self.errors.messages
