@@ -1,6 +1,7 @@
 body {
-	background-image:url('notepad.jpg');
-	background-color: #4682B4;
+	background-image:url('/img/notepad.jpg');
+	/*background-image:url('/img/wood_planks.jpg');*/
+	/*background-image:url('/img/notepad.jpg');*/
 }
 
 .container {
@@ -30,10 +31,17 @@ body {
 	font-size: 20px;
 }
 
-#spidey {
+.easter_egg {
+	font-size: 10px;
+}
+
+img#spidey {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius:10px;
+	opacity:0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 #term {
