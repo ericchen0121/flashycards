@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
 	<h1><div id="term">Term: <%= @card.definition %></div></h1>
 	<div class="card">
@@ -10,6 +11,27 @@
 				<br>
 				<li><input type='submit'/></li>
 			</form>
+=======
+<html>
+<head>
+	<link rel="stylesheet" href="../../public/css/normalize.css">
+	<link rel="stylesheet" href="../../public/css/main.css">
+</head>
+<body>
+	<div class="container">
+		<h2><div id="term">Term: <%= @card.definition %></div></h2>
+		<div class="card">
+			<div id="card">
+				<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
+					<li><h3>Guess:</h3></li>
+					<br>
+					<li><input type='text' name='guess' required/></li>
+					<input type='hidden' name = 'card_id' value = <%= @card.id %> >
+					<br>
+					<li><input type='submit'/></li>
+				</form>
+			</div>
+>>>>>>> Git is a liar, I did not edit card_display.erb
 		</div>
 	</div>
 </div>
