@@ -1,6 +1,6 @@
 <div class="container">
-	<h1>Select a Deck You Want to Play:</h1>
-	<div id="list_deck">
+	<h2>Select a Deck You Want to Play:</h2>
+	<div class="list_deck">
     <ul>
 			<% @decks.each do |deck| %>
   			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a> [ <a href='/deck/<%=deck.id %>/edit'>Edit</a> | <a href='/deck/<%=deck.id %>/delete'>Delete</a> ]</li>

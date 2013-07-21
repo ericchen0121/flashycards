@@ -1,39 +1,67 @@
+/*font-family:Georgia, Times, serif;*/
+/*font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;*/
+/*font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+/*background-image:url('/img/notepad.jpg');*/
+
+
 body {
-	background-image:url('/img/notepad.jpg');
-	/*background-image:url('/img/wood_planks.jpg');*/
-	/*background-image:url('/img/notepad.jpg');*/
-}
-.error404 {
-	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-	text-align: center;
 }
 
-.container {
-  margin: 20px auto;
+/*.error404 {
+	font-family:Monaco, "Liberation Mono", Courier, monospace;
+	text-align: center;
+}*/
+
+/*.container {
+  margin: auto;
   width: 600px;
   padding: 6em 20px 20px 20px;
-}
+}*/
 
-.container h1 {
-	padding-top: 20px;
-	color: #191970;
+h1 {
+	padding:0;
+	margin:0;
+	color: #3DBCB0; 
 	text-align: center;
+	font-family: "Brush Script MT", cursive;
+	font-size: 100px;
+
 }
 
-.list {
+/*h2 {
+	margin-bottom:30px;
+	font-size:20px;
+	font-weight:500;
+	color:#555;
+}*/
+
+/*.list {
 	list-style-type: none;
+	font-family:Monaco, "Liberation Mono", Courier, monospace;
+	font-style:italic;
+	color:#666;
+}*/
+
+
+.list_deck {
+	/*font-family:Monaco, "Liberation Mono", Courier, monospace;*/
+	font-size: 16px;
+	font-color:#777;
+	/*color:#cecbda /*light grey*/*/
 }
 
-.list_everything {
+/*.list_everything {
 	list-style-type: none;
+	font-family:Monaco, "Liberation Mono", Courier, monospace;
+	font-size: 16px;
 	text-align: center;
 	text-decoration: none;
-}
+}*/
 
-.list_everything li {
+/*.list_everything li {
 	padding: 10px;
 	font-size: 20px;
-}
+}*/
 
 .easter_egg {
 	font-size: 10px;
@@ -48,28 +76,29 @@ img#spidey {
 	filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
-#term {
+/*#term {
 	padding-top: 10px;
 	text-align: center;
-}
+}*/
 
-#card form {
+/*#card form {
 	display: block;
 	text-align: center;
-}
+}*/
 
-#card li {
+/*#card li {
 	display: inline-block;
 	margin: 0;
 	padding: 5px;
-}
+}*/
 
-#results {
+/*#results {
 	list-style-type: none;
-}
+}*/
 
-#footer {
+/*#footer {
 	width: 100%;
 	text-align: center;
 	color: #8B008B;
 }
+*/
