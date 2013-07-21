@@ -6,3 +6,10 @@ get '/results' do
 
   erb :results
 end
+
+get '/results/all' do
+  
+  # get all rounds for the user
+  # iterate .each over all rounds 
+  # @results << '
+end
