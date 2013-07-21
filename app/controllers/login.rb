@@ -1,6 +1,11 @@
 enable :sessions
 
 post '/create' do
+  # if params[:password] != params[:password_confirm]
+  #   @message = ["Passwords do not match."]
+  #   erb :index
+  # end
+
   current_user = User.create(name: params[:name], password: params[:password])
   if current_user.valid?
     session[:user_id] = current_user.id

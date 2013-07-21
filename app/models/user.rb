@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :rounds
   # Name cannot be blank. It must also be unique, but based on the lowercase form.
-  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :name, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A\w+\Z/}
   # Passwords cannot be blank, CASE MATTERS
   validates :password, presence: true
 
@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
         error_display_array << "This username has already been taken, please choose another."
       elsif error_message_hash[:name].first.match("can't be blank")
         error_display_array << "Username cannot be blank."
+      elsif error_message_hash[:name].first.match("is invalid")
+        error_display_array << "Username is invalid. Please use only letters, numbers, and underscores."
       end
     end
 
