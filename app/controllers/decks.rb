@@ -36,6 +36,13 @@ end
 
 post '/deck/:deck_id/card/new' do
 
+  if params[:guess] == ""
+    @error = "Please enter a guess!"
+    card_id = session[:array_cards].last
+    @card = Card.where(id: card_id).first
+    erb :card_display
+  end
+
   current_card = Card.find(params[:card_id])
 
   # counts correct and incorrect

@@ -27,7 +27,13 @@
     </ul>
     <br>
     <% if @message %>
-    <div><%= @message %></div>
+      <p>
+        <ul>
+          <% @message.each do |error_message| %>
+            <li><%= error_message %></li>
+          <% end %>
+        </ul>
+      </p>
     <% end %>
   </div>
 

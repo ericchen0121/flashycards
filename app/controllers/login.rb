@@ -7,6 +7,8 @@ post '/create' do
     redirect '/decks'
   else
     # dislplay error messages
+    @message = current_user.return_errors
+    erb :index
   end
 end
 
@@ -17,7 +19,7 @@ post '/login' do
     session[:user_id] = current_user.id
     redirect '/decks'
   else
-    @message = "This user does not exist, please make a new account."
+    @message = ["Invalid username or password."]
     erb :index
   end
 end

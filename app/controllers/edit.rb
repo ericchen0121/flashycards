@@ -1,0 +1,39 @@
+enable :sessions
+
+get '/deck/:deck_id/edit' do
+  @deck = Deck.find(params[:deck_id])
+  @cards = @deck.cards.all
+  erb :edit_deck
+end
+
+get '/deck/:deck_id/delete' do
+  @deck = Deck.find(params[:deck_id])
+  @deck.cards.each { |card| card.delete }
+  @deck.delete
+  @decks = Deck.all
+  erb :select_deck
+end
+
+get '/deck/:deck_id/cards' do
+  @deck = Deck.find(params[:deck_id])
+  @card = Card.find(params[:card_id])
+  erb :select_card
+end
+
+get '/deck/:deck_id/card/:card_id/edit' do
+  @deck = Deck.find(params[:deck_id])
+  @card = Card.find(params[:card_id])
+  erb :edit_card
+end
+
+get '/deck/:deck_id/card/:card_id/delete' do
+  # @deck = Deck.where(id: Card.find(params[:card_id].id).first
+  # Card.delete(params[:card_id])
+  # erb :edit_deck
+
+  card_id = params[:card_id]
+  Card.delete(card_id)
+  @deck = Deck.find(params[:deck_id])
+  @cards = @deck.cards
+  erb :edit_deck
+end
