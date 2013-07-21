@@ -3,6 +3,10 @@ body {
 	/*background-image:url('/img/wood_planks.jpg');*/
 	/*background-image:url('/img/notepad.jpg');*/
 }
+.error404 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	text-align: center;
+}
 
 .container {
   margin: 20px auto;
