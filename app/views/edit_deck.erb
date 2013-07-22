@@ -1,9 +1,0 @@
-<div class="container">
-  <h1><%= @deck.name %></h1>
-    <ul>
-      <% @cards.each do |card| %>
-        <li><%=card.term %> | <em><%=card.definition %></em> [ <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/edit'>Edit</a> | <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/delete'>Delete</a> ]</li>
-      <% end %>
-    </ul>
-  <p><a href='/decks'>Back to Decks</a></p>
-</div>
