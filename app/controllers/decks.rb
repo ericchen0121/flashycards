@@ -5,12 +5,6 @@ get '/decks' do
   erb :select_deck
 end
 
-post '/decks' do
-  Deck.create(name: params[:new_deck_name])
-  @decks = Deck.all
-  erb :select_deck
-end
-
 get '/deck/:deck_id/start' do
  
   @deck_id = params[:deck_id]

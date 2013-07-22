@@ -5,5 +5,18 @@
         <li><strong><%=card.definition %></strong>: <em><%=card.term %></em> [ <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/edit'>Edit</a> | <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/delete'>Delete</a> ]</li>
       <% end %>
     </ul>
+    <ul>
+    <form id="add_card" action='/deck/<%=@deck.id %>/cards' method='post'>
+      <div class="fade_initiate">
+        <li><input class="add_card_button" type='button' value='Add New Card' /></li>
+      </div>
+      <div class="fade_in_items" style="display: none;">
+        <li>New card definition hint: <input id="definition_name" type='text' name='new_definition_name' /></li>
+        <li>New card term to guess: <input type='text' name='new_term_name' /></li>
+        <li><input type='submit' value='Save New Card' /></li>
+        <li><input class="cancel_new_card" type='button' value='Cancel' /></li>
+      </div>
+    </form>
+    </ul>
   <p><a href='/decks'>Back to Decks</a></p>
 </div>

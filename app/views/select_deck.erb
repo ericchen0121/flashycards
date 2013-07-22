@@ -8,27 +8,14 @@
     </ul>
     <ul>
     <form id="add_deck" action='/decks' method='post'>
-      <div class="temp_add_deck_button">
+      <div class="fade_initiate">
         <li><input class="add_deck_button" type='button' value='Add New Deck' /></li>
       </div>
-      <div class="sliding_panel" style="display: none;">
+      <div class="fade_in_items" style="display: none;">
         <li><input id="deck_name" type='text' name='new_deck_name' /></li>
         <li><input type='submit' value='Save New Deck' /></li>
-        <li><input class="cancel" type='submit' value='Cancel' /></li>
+        <li><input class="cancel_new_deck" type='button' value='Cancel' /></li>
       </div>
     </form>
     </ul>
 </div>
-
-<script>
-$(".add_deck_button").click(function () {
-$(".temp_add_deck_button").hide();
-$(".sliding_panel").fadeIn("slow");
-document.getElementById("deck_name").focus();
-});
-
-$(".cancel").click(function () {
-$(".sliding_panel").hide();
-$(".temp_add_deck_button").fadeIn("slow");
-});
-</script>
