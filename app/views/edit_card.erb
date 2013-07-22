@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Edit Card</h1>
+    <p>From the <%=@deck.name %> deck:</p>
+      <ul>
+        <form class="list" action='/deck/<%=@deck.id %>/cards' method='post'>
+          <li>Definition Hint: <input type='text'name='definition' value='<%=@card.definition %>' /></li>
+          <li>Term to Guess: <input type='text' name='term' value='<%= @card.term %>' /></li>
+          <li><input class="button" type='submit' value='Submit'/></li>
+          <input class='text' type='hidden' name='card_id' value='<%=@card.id %>' />
+        </form>
+      </ul>
+  <p><a href='/deck/<%=@deck.id %>/cards'>Back to Deck</a></p>
+</div>

@@ -16,7 +16,7 @@ end
 
 get '/deck/:deck_id/cards' do
   @deck = Deck.find(params[:deck_id])
-  @card = Card.find(params[:card_id])
+  @cards = @deck.cards.all
   erb :select_card
 end
 
@@ -24,6 +24,16 @@ get '/deck/:deck_id/card/:card_id/edit' do
   @deck = Deck.find(params[:deck_id])
   @card = Card.find(params[:card_id])
   erb :edit_card
+end
+
+post '/deck/:deck_id/cards' do
+  @deck = Deck.find(params[:deck_id])
+  @card = Card.find(params[:card_id])
+  @card.definition = params[:definition]
+  @card.term = params[:term]
+  @card.save
+  @cards = @deck.cards.all
+  erb :select_card
 end
 
 get '/deck/:deck_id/card/:card_id/delete' do

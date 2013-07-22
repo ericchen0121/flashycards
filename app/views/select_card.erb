@@ -2,8 +2,8 @@
   <h1><%= @deck.name %></h1>
     <ul>
       <% @cards.each do |card| %>
-        <li><%=card.term %> | <em><%=card.definition %></em> [ <a href='/card/<%=card.id %>/edit'>Edit</a> | <a href='/card/<%=card.id %>/delete'>Delete</a> ]</li>
+        <li><strong><%=card.definition %></strong>: <em><%=card.term %></em> [ <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/edit'>Edit</a> | <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/delete'>Delete</a> ]</li>
       <% end %>
     </ul>
-  <p><a href='/deck/<%=@deck.id %>/edit'>Back to Deck</a></p>
+  <p><a href='/decks'>Back to Decks</a></p>
 </div>

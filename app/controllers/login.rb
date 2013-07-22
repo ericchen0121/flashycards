@@ -6,7 +6,7 @@ post '/create' do
   #   erb :index
   # end
 
-  current_user = User.create(name: params[:name], password: params[:password])
+  current_user = User.create(name: params[:name].downcase, password: params[:password])
   if current_user.valid?
     session[:user_id] = current_user.id
     redirect '/decks'
@@ -18,7 +18,7 @@ post '/create' do
 end
 
 post '/login' do
-  current_user = User.where(name: params[:name], password: params[:password]).first
+  current_user = User.where(name: params[:name].downcase, password: params[:password]).first
 
   if current_user != nil
     session[:user_id] = current_user.id
