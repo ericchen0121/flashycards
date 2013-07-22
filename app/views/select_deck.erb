@@ -4,21 +4,22 @@
     <h4>
       <ul>
   			<% @decks.each do |deck| %>
-    			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a> [ <a href='/deck/<%=deck.id %>/cards'>Edit</a> | <a href='/deck/<%=deck.id %>/delete'>Delete</a> ]</li>
+    			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a>  <a class='edit_deck_fields' href='/deck/<%=deck.id %>/cards'>Edit</a> <a class='edit_deck_fields' href='/deck/<%=deck.id %>/delete'> Delete</a></li>
   			<% end %>
       </ul>
     </h4>
 
+    <br><br>
     <ul>
-    <form id="add_deck" action='/decks' method='post'>
-      <div class="fade_initiate">
-        <li><input class= "pure-button pure-button-orange add_deck_button" type='button' value='Add New Deck' /></li>
-      </div>
-      <div class="fade_in_items" style="display: none;">
-        <li><input id="deck_name" type='text' name='new_deck_name' /></li>
-        <li><input class= "pure-button pure-button-green" type='submit' value='Create quiz' />   <input class= "pure-button pure-button-orange cancel_new_deck" type='button' value='Cancel' /></li>
-      </div>
-    </form>
+      <form id="add_deck" action='/decks' method='post'>
+        <div class="fade_initiate">
+          <li><input class= "pure-button pure-button-orange edit_deck_button" type='button' value='Edit' />   <input class= "pure-button pure-button-orange add_deck_button" type='button' value='Add Quiz' /></li>
+        </div>
+        <div class="fade_in_items" style="display: none;">
+          <li><input id="deck_name" type='text' name='new_deck_name' /></li><br>
+          <li><input class= "pure-button pure-button-green" type='submit' value='Create quiz' />   <input class= "pure-button pure-button-orange cancel_new_deck" type='button' value='Cancel' /></li>
+        </div>
+      </form>
     </ul>
 
     <% if @message %>

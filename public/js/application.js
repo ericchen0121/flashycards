@@ -11,11 +11,22 @@ $(document).ready(function() {
     $('#spidey').toggle();
   });
 
+  
+  $(".add_deck_button").hide();
+  $(".edit_deck_fields").hide();
+
+  $(".edit_deck_button").click(function () {
+  $(".add_deck_button").toggle("slow");
+  $(".edit_deck_fields").toggle("slow");
+  });
+
   $(".add_deck_button").click(function () {
   $(".fade_initiate").hide();
   $(".fade_in_items").fadeIn("slow");
   document.getElementById("deck_name").focus();
   });
+
+ 
 
   $(".cancel_new_deck").click(function () {
   $(".fade_in_items").hide();

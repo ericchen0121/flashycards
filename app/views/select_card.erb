@@ -1,26 +1,25 @@
 <div class="container">
   <h3><%= @deck.name %></h3>
-    <ul>
-      <% @cards.each do |card| %>
-        <li><strong><%=card.definition %></strong>: <em><%=card.term %></em> [ <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/edit'>Edit</a> | <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/delete'>Delete</a> ]</li>
-      <% end %>
-    </ul>
-    
-
-    
-    <ul>
-    <form id="add_card" action='/deck/<%=@deck.id %>/cards' method='post'>
-      <div class="fade_initiate">
-        <li><input class="pure-button pure-button-orange add_card_button" type='button' value='Add New Card' /></li>
-      </div>
-      <div class="fade_in_items" style="display: none;">
-        <li>New card definition hint: <input id="definition_name" type='text' name='new_definition_name' /></li>
-        <li>New card term to guess: <input type='text' name='new_term_name' /></li>
-        <li><input class= "pure-button pure-button-orange" type='submit' value='Save Card' /></li>
-        <li><input class="cancel_new_card" type='button' value='Cancel' /></li>
-      </div>
-    </form>
-    </ul>
+    <h4>
+      <ul>
+        <% @cards.each do |card| %>
+          <li><strong><%=card.definition %></strong>: <em><%=card.term %></em> [ <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/edit'>Edit</a> | <a href='/deck/<%=@deck.id %>/card/<%=card.id %>/delete'>Delete</a> ]</li>
+        <% end %>
+      </ul>
+  
+      <ul>
+        <form id="add_card" action='/deck/<%=@deck.id %>/cards' method='post'>
+          <div class="fade_initiate">
+            <li><input class="pure-button pure-button-orange add_card_button" type='button' value='Add New Card' /></li>
+          </div>
+          <div class="fade_in_items" style="display: none;">
+            <li>Definition (hint): <input id="definition_name" type='text' name='new_definition_name' /></li>
+            <li>Term (to guess): <input type='text' name='new_term_name' /></li><br>
+            <li><input class= "pure-button pure-button-orange" type='submit' value='Save Card' />  <input class="pure-button pure-button-orange cancel_new_card" type='button' value='Cancel' /></li>
+          </div>
+        </form>
+      </ul>
+    </h4>
   <p><a href='/decks'>Back to Decks</a></p>
   <% if @message %>
   <p>

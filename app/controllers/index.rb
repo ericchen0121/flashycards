@@ -1,13 +1,16 @@
 get '/' do
-  # Look in app/views/index.erb
+  # authenticate_gate
   erb :index
 end
 
 get '/logout' do
   session.clear
-  erb :index
+  redirect('/')
 end
 
 get '/about' do
   erb :about
 end
+
+
+

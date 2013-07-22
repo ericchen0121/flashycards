@@ -27,8 +27,12 @@ class Round < ActiveRecord::Base
     100 - percent_correct
   end
 
+  def get_deck_name
+    (deck.name if deck)|| "Deck erased" # Handles the case where deck is erased but the Round and data still exist
+  end
+
   def data
-    {deck_name: deck.name, round: id, correct: correct_count, incorrect: incorrect_count, total: total, percent_correct: percent_correct, percent_incorrect: percent_incorrect}
+    {deck_name: get_deck_name , round: id, correct: correct_count, incorrect: incorrect_count, total: total, percent_correct: percent_correct, percent_incorrect: percent_incorrect}
   end
 
 end

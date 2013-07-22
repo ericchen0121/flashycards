@@ -1,6 +1,8 @@
 enable :sessions
+require_relative '../helpers/sessions'
 
 get '/decks' do
+  # authenticate_gate
   @decks = Deck.all
   erb :select_deck
 end
