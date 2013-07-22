@@ -34,5 +34,5 @@ $(document).ready(function() {
   $(".fade_initiate").fadeIn("slow");
   });
 
-  $(".message").fadeIn("fast").delay(1000).fadeOut("slow");
+  $(".save_message").delay(1000).fadeOut("slow");
 });

@@ -38,7 +38,7 @@ post '/deck/:deck_id/card/:card_id/edit' do
   @card.definition = params[:definition]
   @card.term = params[:term]
   @card.save
-  @message = "Saved!"
+  @message = "Card Saved!"
   erb :edit_card
 end
 
@@ -58,5 +58,5 @@ get '/deck/:deck_id/card/:card_id/delete' do
   Card.delete(card_id)
   @deck = Deck.find(params[:deck_id])
   @cards = @deck.cards
-  erb :edit_deck
+  erb :select_card
 end

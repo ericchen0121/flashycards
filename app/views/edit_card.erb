@@ -9,6 +9,6 @@
           <input class='text' type='hidden' name='card_id' value='<%=@card.id %>' />
         </form>
       </ul>
-      <% if @message %><div class="message"><p><%=@message %></p></div><% end %>
+      <% if @message %><div class="save_message"><h2><%=@message %></h2></div><% end %>
   <p><a href='/deck/<%=@deck.id %>/cards'>Back to Deck</a></p>
 </div>
