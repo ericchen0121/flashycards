@@ -35,4 +35,6 @@ $(document).ready(function() {
   });
 
   $(".save_message").delay(1000).fadeOut("slow");
+
+  document.getElementById("type_answer").focus();
 });
