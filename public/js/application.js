@@ -5,11 +5,10 @@ $(document).ready(function() {
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 
-  $('div.spidey').hide();
+  $('#spidey').hide();
 
-
-  $('div.easter_egg').click(function(){
-    $('div.spidey').toggle();
+  $('.easter_egg').click(function(){
+    $('#spidey').toggle();
   });
 
   $(".add_deck_button").click(function () {

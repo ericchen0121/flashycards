@@ -1,23 +1,26 @@
 <div class="container">
-	<h1>Select a Deck to Play</h1>
+	<h3>Select Quiz</h3>
 	<div class="list_deck">
-    <ul>
-			<% @decks.each do |deck| %>
-  			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a> [ <a href='/deck/<%=deck.id %>/cards'>Edit</a> | <a href='/deck/<%=deck.id %>/delete'>Delete</a> ]</li>
-			<% end %>
-    </ul>
+    <h4>
+      <ul>
+  			<% @decks.each do |deck| %>
+    			<li><a href='/deck/<%=deck.id %>/start'><%= deck.name %></a> [ <a href='/deck/<%=deck.id %>/cards'>Edit</a> | <a href='/deck/<%=deck.id %>/delete'>Delete</a> ]</li>
+  			<% end %>
+      </ul>
+    </h4>
+
     <ul>
     <form id="add_deck" action='/decks' method='post'>
       <div class="fade_initiate">
-        <li><input class="add_deck_button" type='button' value='Add New Deck' /></li>
+        <li><input class= "pure-button pure-button-orange add_deck_button" type='button' value='Add New Deck' /></li>
       </div>
       <div class="fade_in_items" style="display: none;">
         <li><input id="deck_name" type='text' name='new_deck_name' /></li>
-        <li><input type='submit' value='Save New Deck' /></li>
-        <li><input class="cancel_new_deck" type='button' value='Cancel' /></li>
+        <li><input class= "pure-button pure-button-green" type='submit' value='Create quiz' />   <input class= "pure-button pure-button-orange cancel_new_deck" type='button' value='Cancel' /></li>
       </div>
     </form>
     </ul>
+
     <% if @message %>
     <p>
       <ul>

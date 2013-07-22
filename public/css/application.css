@@ -5,18 +5,20 @@
 
 .container {
 	text-align: center;
-	background-image: url('/img/notepad.jpg');
-	background-opacity:0.6;
-  /*filter:alpha(opacity=60); /* For IE8 and earlier */*/
+
 }
 
 body {
+	background-image: url('/img/notepad.jpg');
+	/*background-color: #82e6f5;*/
+	/*opacity:0.65;*/
+  /*filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 
 /* LOGO HEADER STYLE */
 h1 {
 	margin:0;
-	color: #3DBCB0; 
+	color: #64a67f; /*#46446b*/
 	text-align: center;
 	font-family: "Brush Script MT", cursive;
 	font-size: 100px;
@@ -32,14 +34,15 @@ h4 {
 
 /* NAV BAR */
 .nav {
-	background-color:#cecbda;
+	background-color: #ffef91; 
 	width: 100%;
+	border: gray solid 1px;
 }
 
 /* NAV BAR LOGO */
 .nav li:nth-child(1) {
 	float: left;
-	color: #3DBCB0; 
+	font-color: #64a67f;
 	font-family: "Brush Script MT", cursive;
 	font-size: 25px;
 }
@@ -50,10 +53,10 @@ h4 {
 
 /* LOGIN BUTTONS */
 .pure-button-orange {
-	color: white;
+  color: white;
   border-radius: 4px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(223, 117, 20); /* this is an orange */
+  background: #db8a60; /* this is an orange */
 }
 
 .wolfpack-box {
@@ -61,45 +64,55 @@ h4 {
 	top:15%;
 	left:50%;
 	margin-left: -258px;
-	background-color:#ffffff;
+	border-right: 100px;
 	/*border:1px solid black;*/
 }
 
+/* OTHER BUTTONS */
 
-/*h2 {
+.pure-button-green {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #64a67f; /* this is a green*/
+}
+
+h2 {
 	margin-bottom:30px;
-	font-size:20px;
+	font-size:30px;
 	font-weight:500;
 	color:#555;
-}*/
+}
 
-/*.list {
-	list-style-type: none;
-	font-family:Monaco, "Liberation Mono", Courier, monospace;
-	font-style:italic;
-	color:#666;
-}*/
+h3 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	font-size:50px;
+	font-weight:300;
+	color: gray;
+}
 
+h4 {
+	font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+	font-size:18px;
+	font-weight:300;
+}
 
 .list_deck {
-	/*font-family:Monaco, "Liberation Mono", Courier, monospace;*/
-	font-size: 16px;
-	font-color:#777;
-
-	/*color:#cecbda /*light grey*/*/
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	font-size: 22px;
+	/*color:#cecbda /*light grey*/
 }
 
 ul {
 		list-style-type: none;
 }
 
-/*.list_everything {
-	list-style-type: none;
+.list_everything {
 	font-family:Monaco, "Liberation Mono", Courier, monospace;
 	font-size: 16px;
 	text-align: center;
 	text-decoration: none;
-}*/
+}
 
 /*.list_everything li {
 	padding: 10px;
@@ -123,9 +136,17 @@ ul {
 	padding: 5px;
 }*/
 
-/*#results {
-	list-style-type: none;
-}*/
+/* HORIZONTAL RULE */
+/* Gradient transparent - color - transparent */
+		
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
 
 /* FOOTER */
 #footer {

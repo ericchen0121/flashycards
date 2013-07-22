@@ -1,6 +1,6 @@
 <div class="container">
   <div id="results">
-    <h1>Your results for all rounds are: </h1>
+    <h3>All Stats</h3>
     <div class="list_everything">
       <% @results.each do |result| %>
         <ul>
@@ -10,10 +10,11 @@
           <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
           <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
         </ul>
+        <hr>
       <% end %>
     </div>
     <div>
-      <p><a href= '/decks' >Play</a></p>
+      <p><a href= '/decks' >Play a New Deck</a></p>
     </div>
   </div>
 </div>

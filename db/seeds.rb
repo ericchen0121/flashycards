@@ -1,4 +1,16 @@
-state_example_deck = Deck.create(name: "States and Capitals - 6 cards").cards
+world_series = Deck.create(name: "MLB World Series Winners of the Last Decade").cards
+world_series << Card.create(term: 'Giants', definition: "2012 winner between the Tigers and Giants")
+world_series << Card.create(term: 'Cardinals', definition: '2011 winner between the Cardinals and Rangers')
+world_series << Card.create(term: 'Giants', definition: '2010 winner between the Rangers and Giants')
+world_series << Card.create(term: 'Yankees', definition: '2009 winner between the Yankees and Phillies')
+world_series << Card.create(term: 'Phillies', definition: '2008 winner between the Phillies and Rays')
+world_series << Card.create(term: 'Red Sox', definition: '2007 winner between the Rockies and Red Sox')
+world_series << Card.create(term: 'Cardinals', definition: '2006 winner between the Cardinals and Tigers')
+world_series << Card.create(term: 'White Sox', definition: '2005 winner between the Astros and White Sox')
+world_series << Card.create(term: 'Red Sox', definition: '2004 winner between the Red Sox and Cardinals')
+world_series << Card.create(term: 'Marlins', definition: '2003 winner between the Yankees and Marlins')
+
+state_example_deck = Deck.create(name: "State Capitals - mini").cards
 state_example_deck << Card.create(term: "Sacramento", definition: "California")
 state_example_deck << Card.create(term: "Honolulu", definition: "Hawaii")
 state_example_deck << Card.create(term: "Richmond", definition: "Virginia")
@@ -6,28 +18,7 @@ state_example_deck << Card.create(term: "Salem", definition: "Oregon")
 state_example_deck << Card.create(term: "Providence", definition: "Rhode Island")
 state_example_deck << Card.create(term: "Olympia", definition: "Washington")
 
-cat_deck = Deck.create(name: "Famous Cats").cards
-cat_deck << Card.create(term: "Grumpy Cat", definition: "Internet sensation: A foul-tempered feline")
-cat_deck << Card.create(term: "Ceiling Cat", definition: "Internet lovable: Watches you from afar")
-cat_deck << Card.create(term: "Garfield", definition: "Cartoon conglomerate: Loves Lasagna")
-cat_deck << Card.create(term: "Monorail Cat", definition: "Youtube hog: Hovers in the air")
-cat_deck << Card.create(term: "Chesire Cat", definition: "Old timer: Is magical and annoying and purple and grins like a sociopath")
-cat_deck << Card.create(term: "Mr. Bigglesworth", definition: "Movie star: Belongs to Dr. Evil")
-cat_deck << Card.create(term: "Keyboard Cat", definition: "Viral hit: Is a keyboard master")
-
-test_deck_1 = Deck.create(name: "Test Deck One").cards
-test_deck_1 << Card.create(term: "one", definition: "1")
-test_deck_1 << Card.create(term: "two", definition: "2")
-test_deck_1 << Card.create(term: "three", definition: "3")
-test_deck_1 << Card.create(term: "four", definition: "4")
-
-test_deck_2 = Deck.create(name: "Test Deck Two").cards
-test_deck_2 << Card.create(term: "one", definition: "1")
-test_deck_2 << Card.create(term: "two", definition: "2")
-test_deck_2 << Card.create(term: "three", definition: "3")
-test_deck_2 << Card.create(term: "four", definition: "4")
-
-state_deck = Deck.create(name: "States and Capitals").cards
+state_deck = Deck.create(name: "State Capitals").cards
 state_deck << Card.create(definition: "Alabama", term: "Montgomery")
 state_deck << Card.create(definition: "Alaska", term: "Juneau")
 state_deck << Card.create(definition: "Arizona", term: "Phoenix")
@@ -78,3 +69,13 @@ state_deck << Card.create(definition: "Washington", term: "Olympia")
 state_deck << Card.create(definition: "West Virginia", term: "Charleston")
 state_deck << Card.create(definition: "Wisconsin", term: "Madison")
 state_deck << Card.create(definition: "Wyoming", term: "Cheyenne")
+
+cat_deck = Deck.create(name: "Infamous Cats").cards
+cat_deck << Card.create(term: "Garfield", definition: "Cartoon cat: Loves his lasagna")
+cat_deck << Card.create(term: "Grumpy Cat", definition: "Know your meme: Not happy when you scratch his tummy")
+cat_deck << Card.create(term: "Ceiling Cat", definition: "Know your meme: Watches you from a cutout hole in a wall")
+cat_deck << Card.create(term: "Monorail Cat", definition: "Youtube hog: Hovers in the air")
+cat_deck << Card.create(term: "Chesire Cat", definition: "Movie star cat: Is magical, purple and has a wide, creepy grin")
+cat_deck << Card.create(term: "Mr. Bigglesworth", definition: "Movie star cat: Belongs to Dr. Evil")
+cat_deck << Card.create(term: "Keyboard Cat", definition: "Know your meme: Blue-shirted cat who's mastered the piano")
+

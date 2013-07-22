@@ -1,21 +1,19 @@
 <div class="container">
-	<h1><%=@deck.name %></h1>
-		<div id="term">
-			<h2>Term: <%= @card.definition %></h2>
-		</div>
-		<div class="card">
-			<div id="card">
-				<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
-					<ul>
-						<li><h3>Guess:</h3></li>
-						<br>
-						<li><input id="type_answer" type='text' name='guess' required/></li>
-						<input type='hidden' name = 'card_id' value = <%= @card.id %> >
-						<br>
-						<li><input type='submit'/></li>
-					</ul>
-				</form>
-			</div>
+	<div id="term">
+		<h2><%= @card.definition %></h2><br>
+	</div>
+
+	<h4><%=@deck.name %></h4>
+	
+	<div class="card">
+		<div id="card">
+			<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
+				<ul>
+					<li><input id="type_answer" type='text' name='guess' placeholder="You're being quizzed..." required/>
+					<input type='hidden' name = 'card_id' value = <%= @card.id %> >
+					<input class= "pure-button pure-button-orange" type='submit'/></li>
+				</ul>
+			</form>
 		</div>
 	</div>
 </div>

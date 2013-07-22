@@ -11,7 +11,7 @@ post '/create' do
     session[:user_id] = current_user.id
     redirect '/decks'
   else
-    # dislplay error messages
+    # display error messages
     @message = current_user.return_errors
     erb :index
   end

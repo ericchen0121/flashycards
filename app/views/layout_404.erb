@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/pure-min.css">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -12,6 +12,21 @@
   <title>404 Page</title>
 </head>
 <body onLoad="setTimeout('delayer()', 4500)">
+	<div class="pure-menu pure-menu-open pure-menu-horizontal">
+	    <ul class="nav">
+	        <li><a href="/">quiz.me</a></li>
+
+	        <% if session.empty? == false %>
+	          <li><a href="/logout">Logout</a></li>
+	        <% elsif session.empty? %>
+	          <li><a href="#">Login</a></li>
+	        <% end %>
+
+	        <li><a href="/about">About</a></li>
+	        <li><a href="/results/all">Stats</a></li>
+	        <li><a href="/decks">Create Quiz</a></li>
+	    </ul>
+  	</div>
   <%= yield %>
 </body>
 </html>
