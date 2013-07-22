@@ -1,8 +1,9 @@
 enable :sessions
 
 post '/decks' do
-  Deck.create(name: params[:new_deck_name])
+  new_deck = Deck.create(name: params[:new_deck_name])
   @decks = Deck.all
+  @message = new_deck.return_errors
   erb :select_deck
 end
 
@@ -38,7 +39,12 @@ post '/deck/:deck_id/card/:card_id/edit' do
   @card.definition = params[:definition]
   @card.term = params[:term]
   @card.save
-  @message = "Card Saved!"
+  if @card.return_errors.empty?
+    puts "YEAH!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    @save_message = "Card Saved!"
+  else
+    @message = @card.return_errors
+  end
   erb :edit_card
 end
 
@@ -46,6 +52,7 @@ post '/deck/:deck_id/cards' do
   @deck = Deck.find(params[:deck_id])
   @new_card = Card.create(definition: params[:new_definition_name], term: params[:new_term_name], deck_id: @deck.id)
   @cards = @deck.cards.all
+  @message = @new_card.return_errors
   erb :select_card
 end
 

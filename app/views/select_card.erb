@@ -19,4 +19,13 @@
     </form>
     </ul>
   <p><a href='/decks'>Back to Decks</a></p>
+  <% if @message %>
+  <p>
+    <ul>
+      <% @message.each do |error_message| %>
+        <li><%= error_message %></li>
+      <% end %>
+    </ul>
+  </p>
+  <% end %>
 </div>

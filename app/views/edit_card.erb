@@ -9,6 +9,15 @@
           <input class='text' type='hidden' name='card_id' value='<%=@card.id %>' />
         </form>
       </ul>
-      <% if @message %><div class="save_message"><h2><%=@message %></h2></div><% end %>
+      <% if @save_message %><div class="save_message"><h2><%=@save_message %></h2></div><% end %>
   <p><a href='/deck/<%=@deck.id %>/cards'>Back to Deck</a></p>
+  <% if @message %>
+  <p>
+    <ul>
+      <% @message.each do |error_message| %>
+        <li><%= error_message %></li>
+      <% end %>
+    </ul>
+  </p>
+  <% end %>
 </div>
