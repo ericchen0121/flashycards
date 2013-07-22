@@ -7,26 +7,37 @@
 body {
 }
 
-/*.error404 {
+.error404 {
 	font-family:Monaco, "Liberation Mono", Courier, monospace;
 	text-align: center;
-}*/
-
-/*.container {
-  margin: auto;
-  width: 600px;
-  padding: 6em 20px 20px 20px;
-}*/
+}
 
 h1 {
-	padding:0;
 	margin:0;
 	color: #3DBCB0; 
 	text-align: center;
 	font-family: "Brush Script MT", cursive;
 	font-size: 100px;
-
 }
+
+.nav {
+		background-color:#cecbda;
+		 width: 100%;
+}
+.nav li:nth-child(1) {
+	float: left;
+}
+
+.nav li:nth-child(n+2) {
+	float: right;
+}
+
+.nav-logo-badge {
+	color: #3DBCB0; 
+	font-family: "Brush Script MT", cursive;
+	font-size: 30px;
+}
+
 
 /*h2 {
 	margin-bottom:30px;
@@ -40,8 +51,8 @@ h1 {
 	font-family:Monaco, "Liberation Mono", Courier, monospace;
 	font-style:italic;
 	color:#666;
-}*/
-
+}
+*/
 
 .list_deck {
 	/*font-family:Monaco, "Liberation Mono", Courier, monospace;*/

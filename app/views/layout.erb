@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 
-  <link rel="stylesheet" href="/css/normalize.css">
+  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.1/pure-min.css">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -11,12 +12,15 @@
   <title></title>
 </head>
 <body>
-  <div class="navbar-inner">
-    <div class="container-fluid">
-      <ul class="nav main-nav">
-    </div>
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul class="nav">
+        <li><a href="#">test.me</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
   </div>
-
+  
   <%= yield %>
 </body>
 </html>
