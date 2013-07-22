@@ -1,12 +1,13 @@
 enable :sessions
-require_relative '../helpers/sessions'
 
+# LOGIN PAGE
 get '/decks' do
   # authenticate_gate
   @decks = Deck.all
   erb :select_deck
 end
 
+# START QUIZ, INSTANTIATE DECK
 get '/deck/:deck_id/start' do
   
   @deck = Deck.find(params[:deck_id])
@@ -33,6 +34,7 @@ get '/deck/:deck_id/start' do
   erb :card_display
 end
 
+# GAMEPLAY TO SHOW CARD
 post '/deck/:deck_id/card/new' do
 
   # if params[:guess] == ""

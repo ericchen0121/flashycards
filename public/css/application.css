@@ -3,17 +3,22 @@
 /*font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /*background-image:url('/img/notepad.jpg');*/
 
+/* OVERALL DIV CONTAINER */
 .container {
 	text-align: center;
-
 }
 
 body {
-	/*background-image: url('/img/notepad.jpg');*/
-	/*background-color: #82e6f5;*/
-	/*opacity:0.65;*/
-  /*filter:alpha(opacity=60); /* For IE8 and earlier */
+	background-image: url('/img/notepad.jpg');
 }
+
+/* FORM */
+
+input:focus {
+     /* background: #fc9fff;    sexy hot pink */
+}
+
+
 
 /* LOGO HEADER STYLE */
 h1 {
@@ -114,6 +119,8 @@ ul {
 	text-decoration: none;
 }
 
+/* DEPRECATED TAGS */
+
 /*.list_everything li {
 	padding: 10px;
 	font-size: 20px;
@@ -136,16 +143,11 @@ ul {
 	padding: 5px;
 }*/
 
-/* HORIZONTAL RULE */
-/* Gradient transparent - color - transparent */
-		
-hr.style-two {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+
+/* ABOUT PHOTOS */
+
+#team-photos li{
+	display: inline-block;
 }
 
 /* FOOTER */

@@ -1,3 +1,4 @@
+# RESULTS FOR ONE ROUND
 get '/results' do
   # add in loop through session[:user_id] if we want the view to have all results
   round_id = session[:round_id]
@@ -7,6 +8,7 @@ get '/results' do
   erb :results
 end
 
+#RESULTS FOR ALL ROUNDS
 get '/results/all' do
   user_id = session[:user_id]
   user_rounds = User.find(user_id).rounds.reverse # latest round first
