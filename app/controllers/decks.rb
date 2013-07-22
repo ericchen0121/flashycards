@@ -6,7 +6,8 @@ get '/decks' do
 end
 
 get '/deck/:deck_id/start' do
- 
+  
+  @deck = Deck.find(params[:deck_id])
   @deck_id = params[:deck_id]
 
   # create cards to display
@@ -39,6 +40,7 @@ post '/deck/:deck_id/card/new' do
   #   erb :card_display
   # end
 
+  @deck = Deck.find(params[:deck_id])
   current_card = Card.find(params[:card_id])
 
   # counts correct and incorrect
