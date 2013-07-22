@@ -1,32 +1,37 @@
 <div class="container">
-  <h1>quiz.me</h1>
-  
-  <ul>
-    <form class="pure-form" action='/create' method='post'>
-      <input type="text" name="name" id="name" placeholder="Username">
-      <input type="password" name="password" id="password" placeholder="Password">
-      <input class= "pure-button pure-button-orange" type="submit" value="Create">
-    </form>
-  </ul>
-  <h4>or...</h4>
-   <ul>
-    <form class="pure-form" action='/login' method='post'>
-      <input type="text" name="name" id="name" placeholder="Username">
-      <input type="password" name="password" id="password" placeholder="Password">
-      <input class= "pure-button pure-button-orange" type="submit" value="Login">
-    </form>
-  </ul>
-  <br>
+  <div class="wolfpack-box">
+    <div class="wolfpack-text">  
+      <h1>quiz.me</h1>
+    
+      <ul>
+        <form class="pure-form" action='/create' method='post'>
+          <input type="text" name="name" id="name" placeholder="Username">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input class= "pure-button pure-button-orange" type="submit" value="Create">
+        </form>
+      </ul>
+      <h4>or...</h4>
+       <ul>
+        <form class="pure-form" action='/login' method='post'>
+          <input type="text" name="name" id="name" placeholder="Username">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <input class= "pure-button pure-button-orange" type="submit" value="Login">
+        </form>
+      </ul><br>
+      
+      <p>
+        <% if @message %>
+        <ul>
+          <% @message.each do |error_message| %>
+            <li><%= error_message %></li>
+          <% end %>
+        </ul>
+        <% end %>
+      </p>
+    </div>
+  </div>
 
-  <% if @message %>
-  <p>
-    <ul>
-      <% @message.each do |error_message| %>
-        <li><%= error_message %></li>
-      <% end %>
-    </ul>
-  </p>
-  <% end %>
+
 </div>
 
 <div class='spidey easter_egg'>

@@ -5,15 +5,10 @@
 
 .container {
 	text-align: center;
+	background-image: url('/img/notepad.jpg');
+	background-opacity:0.6;
+  /*filter:alpha(opacity=60); /* For IE8 and earlier */*/
 }
-
-.pure-button-orange {
-	color: white;
-  border-radius: 4px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  background: rgb(223, 117, 20); /* this is an orange */
-}
-
 
 body {
 }
@@ -52,10 +47,25 @@ h4 {
 .nav li:nth-child(n+2) {
 	float: right;
 }
- 
-input type {
-	margin: auto;
+
+/* LOGIN BUTTONS */
+.pure-button-orange {
+	color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(223, 117, 20); /* this is an orange */
 }
+
+.wolfpack-box {
+	position:fixed;
+	top:15%;
+	left:50%;
+	margin-left: -258px;
+	background-color:#ffffff;
+	/*border:1px solid black;*/
+}
+
+
 /*h2 {
 	margin-bottom:30px;
 	font-size:20px;
