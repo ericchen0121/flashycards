@@ -10,5 +10,12 @@ $(document).ready(function() {
 
   $('div.easter_egg').click(function(){
     $('div.spidey').toggle();
-  });
+  }); 
+
+    $("#logout_form").on('submit', function(event) {
+      event.preventDefault();
+      $('#logout_space').append("You've logged out.")
+    });
+
+
 });
