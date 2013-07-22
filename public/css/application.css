@@ -3,15 +3,22 @@
 /*font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 /*background-image:url('/img/notepad.jpg');*/
 
+.container {
+	text-align: center;
+}
+
+.pure-button-orange {
+	color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
 
 body {
 }
 
-.error404 {
-	font-family:Monaco, "Liberation Mono", Courier, monospace;
-	text-align: center;
-}
-
+/* LOGO HEADER STYLE */
 h1 {
 	margin:0;
 	color: #3DBCB0; 
@@ -20,25 +27,35 @@ h1 {
 	font-size: 100px;
 }
 
-.nav {
-		background-color:#cecbda;
-		 width: 100%;
+h4 {
+	margin:0;
+	color: gray;
+	text-align: center;
+	font-family: "Brush Script MT", cursive;
+	font-size: 30px;
 }
+
+/* NAV BAR */
+.nav {
+	background-color:#cecbda;
+	width: 100%;
+}
+
+/* NAV BAR LOGO */
 .nav li:nth-child(1) {
 	float: left;
+	color: #3DBCB0; 
+	font-family: "Brush Script MT", cursive;
+	font-size: 25px;
 }
 
 .nav li:nth-child(n+2) {
 	float: right;
 }
-
-.nav-logo-badge {
-	color: #3DBCB0; 
-	font-family: "Brush Script MT", cursive;
-	font-size: 30px;
+ 
+input type {
+	margin: auto;
 }
-
-
 /*h2 {
 	margin-bottom:30px;
 	font-size:20px;
@@ -51,14 +68,19 @@ h1 {
 	font-family:Monaco, "Liberation Mono", Courier, monospace;
 	font-style:italic;
 	color:#666;
-}
-*/
+}*/
+
 
 .list_deck {
 	/*font-family:Monaco, "Liberation Mono", Courier, monospace;*/
 	font-size: 16px;
 	font-color:#777;
+
 	/*color:#cecbda /*light grey*/*/
+}
+
+ul {
+		list-style-type: none;
 }
 
 /*.list_everything {
@@ -74,18 +96,6 @@ h1 {
 	font-size: 20px;
 }*/
 
-.easter_egg {
-	font-size: 10px;
-}
-
-img#spidey {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius:10px;
-	opacity:0.6;
-	filter: alpha(opacity=60); /* For IE8 and earlier */
-}
 
 /*#term {
 	padding-top: 10px;
@@ -107,9 +117,30 @@ img#spidey {
 	list-style-type: none;
 }*/
 
-/*#footer {
+/* FOOTER */
+#footer {
 	width: 100%;
 	text-align: center;
 	color: #8B008B;
 }
-*/
+
+
+/* EASTER EGGS */
+.easter_egg {
+	font-size: 10px;
+}
+
+img#spidey {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:10px;
+	opacity:0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+/* ERROR PAGE */
+.error404 {
+	font-family:Monaco, "Liberation Mono", Courier, monospace;
+	text-align: center;
+}

@@ -2,11 +2,13 @@
 	<div id="results">
 		<h1>Your results for this round are: </h1>
 		<div class="list_everything">
-      <li>Deck: <%= @results[:deck_name] %></li>
-		  <li>Round# <%= @results[:round] %></li>
-		  <li>Total Cards: <%= @results[:total] %></li>
-		  <li>Correct: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
-		  <li>Incorrect: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
+      <ul>
+        <li>Deck: <%= @results[:deck_name] %></li>
+  		  <li>Round# <%= @results[:round] %></li>
+  		  <li>Total Cards: <%= @results[:total] %></li>
+  		  <li>Correct: <%= @results[:correct] %> (<%= @results[:percent_correct] %>%)</li>
+  		  <li>Incorrect: <%= @results[:incorrect] %> (<%= @results[:percent_incorrect] %>%)</li>
+      </ul>
 		</div>
     <div>
     	<p><a href= '/results/all' >View all results</a></p>

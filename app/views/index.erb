@@ -1,21 +1,19 @@
 <div class="container">
-  <h1>test.me</h1>
+  <h1>quiz.me</h1>
   
   <ul>
-    <form class="list" action='/create' method='post'>
-      <h2>Create:</h2>
-      <li>Username: <input type='text' name='name'/></li><br>
-      <li>Password: <input type='text'name='password'/></li><br>
-      <li><input class="button" type='submit' value='Submit'/></li>
+    <form class="pure-form" action='/create' method='post'>
+      <input type="text" name="name" id="name" placeholder="Username">
+      <input type="password" name="password" id="password" placeholder="Password">
+      <input class= "pure-button pure-button-orange" type="submit" value="Create">
     </form>
   </ul>
-  or...
-  <ul>
-    <form class="list" action='/login' method='post'>
-      <h2>Login:</h2>
-      <li>Username: <input type='text' name='name'/></li><br>
-      <li>Password: <input type='text'name='password'/></li><br>
-      <li><input class="button" type='submit' value='Submit'/></li>
+  <h4>or...</h4>
+   <ul>
+    <form class="pure-form" action='/login' method='post'>
+      <input type="text" name="name" id="name" placeholder="Username">
+      <input type="password" name="password" id="password" placeholder="Password">
+      <input class= "pure-button pure-button-orange" type="submit" value="Login">
     </form>
   </ul>
   <br>
@@ -35,9 +33,3 @@
   <img id="spidey" src="/img/spidey_wtf.jpg" height="184", width="250">
 </div>
 
-<br>
-
-<div id="footer">
-  Coded by: Dan, Eric, Adam, and Jared
-  <p><div class='easter_egg'>easter egg</div>
-</div>

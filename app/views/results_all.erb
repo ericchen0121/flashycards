@@ -3,11 +3,13 @@
     <h1>Your results for all rounds are: </h1>
     <div class="list_everything">
       <% @results.each do |result| %>
-        <li>Deck: <%= result[:deck_name] %></li>
-        <li>Round: <%= result[:round] %></li>
-        <li>Total Cards: <%= result[:total] %></li>
-        <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
-        <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
+        <ul>
+          <li>Deck: <%= result[:deck_name] %></li>
+          <li>Round: <%= result[:round] %></li>
+          <li>Total Cards: <%= result[:total] %></li>
+          <li>Correct: <%= result[:correct] %> (<%= result[:percent_correct] %>%)</li>
+          <li>Incorrect: <%= result[:incorrect] %> (<%= result[:percent_incorrect] %>%)</li>
+        </ul>
       <% end %>
     </div>
     <div>

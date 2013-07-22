@@ -1,15 +1,20 @@
 <div class="container">
-	<h2><div id="term">Term: <%= @card.definition %></div></h2>
-	<div class="card">
-		<div id="card">
-			<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
-				<li><h3>Guess:</h3></li>
-				<br>
-				<li><input type='text' name='guess' required/></li>
-				<input type='hidden' name = 'card_id' value = <%= @card.id %> >
-				<br>
-				<li><input type='submit'/></li>
-			</form>
+		<div id="term">
+			<h2>Term: <%= @card.definition %></h2>
+		</div>
+		<div class="card">
+			<div id="card">
+				<form action='/deck/<%= @deck_id %>/card/new' method='post'><br>
+					<ul>
+						<li><h3>Guess:</h3></li>
+						<br>
+						<li><input type='text' name='guess' required/></li>
+						<input type='hidden' name = 'card_id' value = <%= @card.id %> >
+						<br>
+						<li><input type='submit'/></li>
+					</ul>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
