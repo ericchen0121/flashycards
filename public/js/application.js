@@ -12,10 +12,12 @@ $(document).ready(function() {
     $('div.spidey').toggle();
   }); 
 
-    $("#logout_form").on('submit', function(event) {
-      event.preventDefault();
-      $('#logout_space').append("You've logged out.")
-    });
+  
+
+    // $("#logout_form").on('submit', function(event) {
+    //   event.preventDefault();
+    //   $('#logout_space').append("You've logged out.")
+    // });
 
 
 });
